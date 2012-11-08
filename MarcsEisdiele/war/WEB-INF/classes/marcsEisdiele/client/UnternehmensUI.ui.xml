@@ -1,0 +1,117 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+    xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button">
+    
+	
+	<ui:style>
+		.button {
+			font-weight: bold;
+			margin-top: 20px; 
+			margin-left: 20px;
+			margin-bottom: 20px;
+		}
+		.label {
+			font-size: 14px;
+			margin-bottom: 10px;
+			margin-left: 20px;
+			width: 220px;
+			}
+		.heading{
+  			font-size: 2em;
+  			font-weight: bold;
+  			color: #777777;
+  			margin-top: 20px;
+  			margin-left: 10px;
+  			margin-bottom: 20px;
+		}
+		.currentValue{
+			width: 60px;
+			margin-left: 14px;
+
+		}
+		.body{
+			border-width: 5px;
+			border-color: darkblue;
+		}
+		.vPanel {
+			float:left;
+		}
+		.companyname {
+			width: 200px;
+		}
+	</ui:style>
+
+		<g:HTMLPanel>
+		<g:Label  ui:field="lCompanyname" styleName="{style.heading}"/>
+		<div styleName="body">
+   	    <g:VerticalPanel styleName="{style.vPanel}">
+   	    	<g:HorizontalPanel>
+				<g:Label styleName="{style.label}">Unternehmensname: </g:Label>
+				<g:TextBox styleName="{style.companyname}" ui:field="tCompanyname"/>		
+ 			</g:HorizontalPanel>
+ 			<g:HorizontalPanel>
+	    		<g:Label styleName="{style.label}"> Anzahl der Mitarbeiter: </g:Label>
+				<gxt:Slider ui:field="sPersonal"/>
+				<g:IntegerBox styleName="{style.currentValue}" ui:field="currentPersonal"/>	
+	    	</g:HorizontalPanel>
+ 			<g:HorizontalPanel>	    		 
+	    		<g:Label styleName="{style.label}"> Startkapital des Unternehmens: </g:Label>
+	    		<gxt:Slider ui:field="sCapital"/>
+	    		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentCapital"/>	
+	    	</g:HorizontalPanel>
+	    	<g:HorizontalPanel>
+	     		<g:Label styleName="{style.label}"> Qualität des Produkts: </g:Label>
+	     		<gxt:Slider ui:field="sQuality"/>
+	     		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentProdQuality"/>	
+	     	</g:HorizontalPanel>
+	     	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> Maschinenanzahl </g:Label>
+		 		<gxt:Slider ui:field="sMaschine"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentMaschine"/>	
+		 	</g:HorizontalPanel>
+	     	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> Kapazität pro Maschine: </g:Label>
+		 		<gxt:Slider ui:field="sCapaticity"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentCapaticity"/>	
+		 	</g:HorizontalPanel>
+		 	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> Auslastung der Maschinen: </g:Label>
+		 		<gxt:Slider ui:field="sWorkload"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentworkload"/>	
+		 	</g:HorizontalPanel>
+		 	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> Lagerkapazität fuer Produkte: </g:Label>
+		 		<gxt:Slider ui:field="sStorage"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentStorage"/>	
+		 	</g:HorizontalPanel>	
+		 	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> variable Stückkosten: </g:Label>
+		 		<gxt:Slider ui:field="sVarCost"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentVarCost"/>	
+		 	</g:HorizontalPanel>
+	     	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> Preis: </g:Label>
+		 		<gxt:Slider ui:field="sPrice"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentPrice"/>	
+		 	</g:HorizontalPanel>
+	     	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> Marketing: </g:Label>
+		 		<gxt:Slider ui:field="sMarketing"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentMarketing"/>	
+		 	</g:HorizontalPanel>		 		 	
+	     	<g:HorizontalPanel>
+		 		<g:Label styleName="{style.label}"> Marktanteil: </g:Label>
+		 		<gxt:Slider ui:field="sMarket"/>
+		 		<g:IntegerBox styleName="{style.currentValue}" ui:field="currentMarket"/>	
+		 	</g:HorizontalPanel>
+		 	<g:HorizontalPanel>
+			 	<g:Button styleName="{style.button}" ui:field="bUnternehmenFestlegen" />
+			 	<g:Button styleName="{style.button}" ui:field="bSaveCompany"/>
+		 	</g:HorizontalPanel>
+    	</g:VerticalPanel>
+		<div class="company"></div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

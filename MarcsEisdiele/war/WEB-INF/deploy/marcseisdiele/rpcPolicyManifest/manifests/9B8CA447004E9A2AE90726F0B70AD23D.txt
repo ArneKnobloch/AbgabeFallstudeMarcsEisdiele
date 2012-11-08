@@ -1,0 +1,2 @@
+serviceClass: marcsEisdiele.client.UnternehmensService
+path: ADAC22EAC84E6FFE8215D844AE1F38D8.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: marcsEisdiele.client.UnternehmensService
+path: 6A8923895FA1649540D1CCC5441C1869.gwt.rpc
